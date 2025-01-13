@@ -1,0 +1,259 @@
+
+:root {
+  --primary: #690585; 
+  --white: #fffffe; 
+  --black: #141414; 
+  --grey: #9ba4ad; 
+  --headline1: 700 2rem/normal 'Maven Pro'; 
+  --headline2: 700 1.75rem/normal 'Maven Pro'; 
+  --headline3: 700 1.625rem/3rem 'Maven Pro'; 
+  --headline4: 700 1.5rem/normal 'Maven Pro'; 
+  --button: 700 1.125rem/1.75rem 'Maven Pro'; 
+  --body1-regular: 400 1.125rem/1.75rem 'Maven Pro'; 
+  --body1-bold: 700 1.125rem/1.75rem 'Maven Pro'; 
+  --body2-regular: 400 1rem/normal 'Maven Pro'; 
+}
+
+body {
+  font: var(--body1-regular);
+  background-color: var(--black);
+  margin: 0;
+}
+
+h1{
+  color: var(--primary);
+  font: var(--headline1);
+}
+
+h2{
+  font: var(--headline2);
+  color: var(--primary);
+}
+
+h3 {
+  color: var(--white);
+}
+
+p{
+  color: var(--white);
+  font: var(--button);
+}
+
+section {
+  padding: 20px
+}
+
+header {
+  background: #690585;
+  color: white;
+  padding: 1rem 0;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  padding: 0 2rem;
+}
+nav {
+  margin: 1rem;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+main {
+  padding: 2rem;
+}
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.about  {
+  background-image: url("./images/patter.png");
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 50px;
+}
+
+button{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:var(--primary);
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background:var(--primary);
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.skills-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+.skill i, 
+.skill img {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hobbies-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hobbies-section h2 {
+  margin-bottom: 1rem;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.hobby:hover {
+  transform: scale(1.1);
+}
+
+.hobby i,
+.hobby img {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hobby img {
+  width: 40px;
+  height: 40px;
+}
+
+.hobby span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.proyects {
+  display: flex;
+    gap: 50px;
+    margin: 50px 0;
+    align-items: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .about, .proyects {
+    flex-direction: column-reverse;
+  }
+
+  header {
+    flex-direction: column;
+}
